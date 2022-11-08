@@ -4,6 +4,7 @@ import { ColorSchemeProvider, MantineProvider, Paper, ColorScheme } from "@manti
 import LightAndDarkModeButton from './Components/LightDarkButton';
 import { useLocalStorage, useHotkeys } from '@mantine/hooks';
 import Buttons from './Components/Buttons';
+import ChipsExample from './Components/ChipsExample';
 
 function App() {
   const [colorScheme, setColorScheme] = useLocalStorage<ColorScheme>({
@@ -24,6 +25,7 @@ function App() {
             <LightAndDarkModeButton />
             <Cards />
             <Buttons />
+            <ChipsExample />
           </Paper>
         </MantineProvider>
       </ColorSchemeProvider>
