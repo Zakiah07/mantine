@@ -1,12 +1,9 @@
 import './App.css';
-import Cards from './Components/Cards';
-import { ColorSchemeProvider, MantineProvider, Paper, ColorScheme } from "@mantine/core"
-import LightAndDarkModeButton from './Components/LightDarkButton';
+// import Cards from './Components/Cards';
+import { ColorSchemeProvider, MantineProvider, ColorScheme, Paper } from "@mantine/core"
 import { useLocalStorage, useHotkeys } from '@mantine/hooks';
-import Buttons from './Components/Buttons';
-import ChipsExample from './Components/ChipsExample';
-import InputExample from './Components/Input';
-import TextTitle from './Components/TextTitle';
+// import Buttons from './Components/Buttons';
+import AppShellExample from './Components/AppShell';
 
 function App() {
   const [colorScheme, setColorScheme] = useLocalStorage<ColorScheme>({
@@ -23,14 +20,11 @@ function App() {
     <div className="App">
       <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
         <MantineProvider theme={{ colorScheme }}>
-          <Paper p="md" radius={0} style={{ minHeight: "100vh" }} >
-            <LightAndDarkModeButton />
-            <Cards />
-            <Buttons />
-            <ChipsExample />
-            <InputExample />
-            <TextTitle />
+          <Paper>
+            <AppShellExample />
           </Paper>
+          {/* <Cards /> */}
+          {/* <Buttons /> */}
         </MantineProvider>
       </ColorSchemeProvider>
     </div >
