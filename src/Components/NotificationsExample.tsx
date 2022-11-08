@@ -19,18 +19,20 @@ function NotificationsExample() {
             })
     }
 
-    <div>
-        <Button variant="outline"
-            onClick={() => {
-                showNotification({
-                    message: "WE ARE GETTING YOUR DATA"
-                })
-                getPlayerName()
-            }}>
-            Show Data
-        </Button>
-        {randomPlayer.first_name}
-    </div>
+    return (
+        <div>
+            <Button variant="outline"
+                onClick={() => {
+                    showNotification({
+                        message: "WE ARE GETTING YOUR DATA"
+                    })
+                    getPlayerName()
+                }}>
+                Show Data
+            </Button>
+            {randomPlayer.first_name}
+        </div>
+    )
 }
 
 export default NotificationsExample;

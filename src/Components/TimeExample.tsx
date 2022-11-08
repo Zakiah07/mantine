@@ -16,7 +16,7 @@ function TimeExample() {
 
     return (
         <div >
-            <TimeInput icon={<Button></Button>} styles={(theme) => ({
+            <TimeInput icon={<Button></Button>} sx={(theme) => ({
                 icon: {
                     color: theme.colors.orange[7]
                 },
@@ -24,7 +24,7 @@ function TimeExample() {
                     backgroundColor: theme.colors.blue[5]
                 }
             })} format="12" label="this is label" description="this is a description" value={timeInput} onChange={setTimeInput} />
-            <TimeRangeInput styles={(theme) => ({
+            <TimeRangeInput sx={(theme) => ({
                 icon: {
                     color: theme.colors.orange[7]
                 },
